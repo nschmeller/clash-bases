@@ -1,4 +1,4 @@
-use std::collections::BTreeSet;
+use std::collections::{BTreeMap, BTreeSet};
 
 use gloo_net::http::Request;
 use serde::Deserialize;
@@ -22,6 +22,10 @@ pub struct Base {
     pub tags: Vec<String>,
     #[serde(default)]
     pub added: String,
+    #[serde(default)]
+    pub image: Option<String>,
+    #[serde(default)]
+    pub last_verified: Option<String>,
 }
 
 #[derive(Deserialize)]
@@ -29,12 +33,18 @@ struct BaseFile {
     bases: Vec<Base>,
 }
 
+#[derive(Clone, Copy, PartialEq, Eq)]
+enum ThTab {
+    All,
+    Th(u8),
+}
+
 #[function_component(App)]
 fn app() -> Html {
     let bases = use_state(Vec::<Base>::new);
     let loading = use_state(|| true);
     let error = use_state(|| Option::<String>::None);
-    let filter_th = use_state(|| Option::<u8>::None);
+    let tab = use_state(|| Option::<ThTab>::None);
     let filter_type = use_state(String::new);
     let search = use_state(String::new);
 
@@ -42,6 +52,7 @@ fn app() -> Html {
         let bases = bases.clone();
         let loading = loading.clone();
         let error = error.clone();
+        let tab = tab.clone();
         use_effect_with((), move |_| {
             wasm_bindgen_futures::spawn_local(async move {
                 match Request::get("bases.json").send().await {
@@ -53,6 +64,14 @@ fn app() -> Html {
                                     .cmp(&a.town_hall)
                                     .then_with(|| a.name.cmp(&b.name))
                             });
+                            // Default to the highest TH that has bases.
+                            let default_tab = list
+                                .iter()
+                                .map(|b| b.town_hall)
+                                .max()
+                                .map(ThTab::Th)
+                                .unwrap_or(ThTab::All);
+                            tab.set(Some(default_tab));
                             bases.set(list);
                             loading.set(false);
                         }
@@ -71,20 +90,29 @@ fn app() -> Html {
         });
     }
 
-    let town_halls: Vec<u8> = {
-        let s: BTreeSet<u8> = bases.iter().map(|b| b.town_hall).collect();
-        let mut v: Vec<u8> = s.into_iter().collect();
-        v.sort_by(|a, b| b.cmp(a));
-        v
+    let counts_per_th: BTreeMap<u8, usize> = {
+        let mut m: BTreeMap<u8, usize> = BTreeMap::new();
+        for b in bases.iter() {
+            *m.entry(b.town_hall).or_default() += 1;
+        }
+        m
     };
+    // TH levels descending so TH18 sits leftmost.
+    let town_halls: Vec<u8> = counts_per_th.keys().rev().copied().collect();
+
     let types: Vec<String> = {
         let s: BTreeSet<String> = bases.iter().map(|b| b.base_type.clone()).collect();
         s.into_iter().collect()
     };
 
+    let active_tab = tab.unwrap_or(ThTab::All);
+
     let filtered: Vec<Base> = bases
         .iter()
-        .filter(|b| filter_th.map_or(true, |th| b.town_hall == th))
+        .filter(|b| match active_tab {
+            ThTab::All => true,
+            ThTab::Th(t) => b.town_hall == t,
+        })
         .filter(|b| filter_type.is_empty() || b.base_type.eq_ignore_ascii_case(&filter_type))
         .filter(|b| {
             let q = search.trim().to_lowercase();
@@ -107,15 +135,6 @@ fn app() -> Html {
             }
         })
     };
-    let on_th_change = {
-        let filter_th = filter_th.clone();
-        Callback::from(move |e: Event| {
-            if let Some(sel) = e.target().and_then(|t| t.dyn_into::<HtmlSelectElement>().ok()) {
-                let v = sel.value();
-                filter_th.set(if v.is_empty() { None } else { v.parse().ok() });
-            }
-        })
-    };
     let on_type_change = {
         let filter_type = filter_type.clone();
         Callback::from(move |e: Event| {
@@ -124,6 +143,13 @@ fn app() -> Html {
             }
         })
     };
+
+    let on_pick = |t: ThTab| {
+        let tab = tab.clone();
+        Callback::from(move |_: MouseEvent| tab.set(Some(t)))
+    };
+
+    let total = bases.len();
 
     let body = if *loading {
         html! { <p class="status">{ "Loading bases…" }</p> }
@@ -160,6 +186,35 @@ fn app() -> Html {
                 </p>
             </header>
 
+            if !bases.is_empty() {
+                <nav class="tabs" role="tablist" aria-label="Filter by Town Hall level">
+                    <button
+                        class={classes!("tab", (active_tab == ThTab::All).then_some("active"))}
+                        onclick={on_pick(ThTab::All)}
+                        role="tab"
+                        aria-selected={(active_tab == ThTab::All).to_string()}
+                    >
+                        { "All " }
+                        <span class="tab-count">{ total }</span>
+                    </button>
+                    { for town_halls.iter().map(|th| {
+                        let t = ThTab::Th(*th);
+                        let n = counts_per_th.get(th).copied().unwrap_or(0);
+                        html! {
+                            <button
+                                class={classes!("tab", (active_tab == t).then_some("active"))}
+                                onclick={on_pick(t)}
+                                role="tab"
+                                aria-selected={(active_tab == t).to_string()}
+                            >
+                                { format!("TH{th} ") }
+                                <span class="tab-count">{ n }</span>
+                            </button>
+                        }
+                    }) }
+                </nav>
+            }
+
             <section class="controls">
                 <input
                     type="text"
@@ -167,14 +222,6 @@ fn app() -> Html {
                     value={(*search).clone()}
                     oninput={on_search}
                 />
-                <select onchange={on_th_change}>
-                    <option value="" selected={filter_th.is_none()}>{ "All Town Halls" }</option>
-                    { for town_halls.iter().map(|th| html! {
-                        <option value={th.to_string()} selected={filter_th.map_or(false, |x| x == *th)}>
-                            { format!("TH{}", th) }
-                        </option>
-                    }) }
-                </select>
                 <select onchange={on_type_change}>
                     <option value="" selected={filter_type.is_empty()}>{ "All Types" }</option>
                     { for types.iter().map(|t| html! {
@@ -229,6 +276,11 @@ fn base_card(props: &BaseCardProps) -> Html {
 
     html! {
         <article class="card">
+            if let Some(img) = &b.image {
+                <a class="thumb" href={b.link.clone()} target="_blank" rel="noopener noreferrer">
+                    <img src={img.clone()} alt={format!("Preview of {}", &b.name)} loading="lazy" />
+                </a>
+            }
             <div class="card-header">
                 <span class={badge_class}>{ format!("TH{}", b.town_hall) }</span>
                 <span class="type">{ &b.base_type }</span>

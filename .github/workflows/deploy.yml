@@ -20,8 +20,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validate bases.json
-        run: ./scripts/validate-bases.sh bases.json
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate bases.json (structural + liveness)
+        run: python3 scripts/validate-bases.py bases.json --liveness
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable

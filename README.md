@@ -69,6 +69,28 @@ the original builder.
 > It picks up the layout link from your clipboard if one is there, prompts
 > for the remaining fields, and validates the result before writing.
 
+### Validating bases.json
+
+```bash
+python3 scripts/validate-bases.py bases.json
+```
+
+The validator goes beyond schema-checking. Every layout link is
+required to match a fixed structural shape derived from real Supercell
+share IDs:
+
+- The id portion looks like `TH<n>%3A(HV|WB)%3A<32-char-base64url>`.
+- The base64url payload decodes to exactly **24 bytes**.
+- Bytes 4–8 of the payload encode the layout slot (1, 2 or 3) — anything
+  outside that range means the link is forged or corrupted.
+- The TH number embedded in the URL must match the entry's `town_hall`.
+
+Pass `--liveness` to additionally HTTP-probe each link against
+`link.clashofclans.com`. Liveness is best-effort: Supercell does not
+expose an "is this layout valid?" API, so a 200 only confirms that the
+share endpoint accepted the request, not that the layout still resolves
+in-game. The CI workflow runs this on every push.
+
 ### Field reference
 
 | Field         | Required | Notes                                                                |

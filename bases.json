@@ -1,3 +1,2180 @@
 {
-  "bases": []
+  "bases": [
+    {
+      "id": "th18-fwa-basic",
+      "name": "FWA Basic (TH18)",
+      "town_hall": 18,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH18%3AWB%3AAAAAAgAAAAMIFXlpMp2DcHS1uqUMNgA4",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 18.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th18-fwa-ice",
+      "name": "FWA Ice (TH18)",
+      "town_hall": 18,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH18%3AWB%3AAAAAEAAAAAK_x5dHQEJXV0tXs_JDj5s_",
+      "description": "Farm War Alliance FWA Ice layout for Town Hall 18.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-ice"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th18-fwa-risingdawn",
+      "name": "FWA Rising Dawn (TH18)",
+      "town_hall": 18,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH18%3AWB%3AAAAAMwAAAAJ8_jtp6RRc8U3ZCZTYot51",
+      "description": "Farm War Alliance FWA Rising Dawn layout for Town Hall 18.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-rising-dawn"
+      ],
+      "added": "2026-04-26",
+      "image": "https://i.imgur.com/4Tatx5Y.jpeg"
+    },
+    {
+      "id": "th18-klawkla-home",
+      "name": "KLAWKLA TH18 Home Base",
+      "town_hall": 18,
+      "type": "Home Village",
+      "link": "https://link.clashofclans.com/th?action=OpenLayout&id=TH18%3AHV%3AAAAAJgAAAAKciObXrlJeTTlrYRq4zriK",
+      "description": "TH18 home village layout shared by KLAWKLA in their TH18 release video.",
+      "builder": "KLAWKLA (YouTube)",
+      "tags": [
+        "home-village",
+        "th18",
+        "youtube-share"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-1",
+      "name": "Apr '25 Showcase #1 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAHAAAAAKCES2jko39otlJFPqHkStR",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/1.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-10",
+      "name": "Apr '25 Showcase #10 (TH17)",
+      "town_hall": 17,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AHV%3AAAAAHAAAAAKBs6lPxPo0L1syrv8thRAN",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/10.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "legend"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-11",
+      "name": "Apr '25 Showcase #11 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAQQAAAAIhT-OAZ3w-30tYlC309NNC",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/11.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-12",
+      "name": "Apr '25 Showcase #12 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAADgAAAAKgl2kbLVwdAqPkzSc4KTiK",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/12.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-13",
+      "name": "Apr '25 Showcase #13 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAEQAAAAKZlFN5m3i7onuDg8HYcqyv",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/13.png",
+      "description": "1x Rage Tower & 1x Poison Tower; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-14",
+      "name": "Apr '25 Showcase #14 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAFwAAAAKFGiXSjYs0OQduV1zJG-Xz",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/14.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-15",
+      "name": "Apr '25 Showcase #15 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAACQAAAAKyC6z4PPLRfSWyLBV77q3M",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/15.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-2",
+      "name": "Apr '25 Showcase #2 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAKAAAAAJ3jSZ0rEN7eGegzBkbztcV",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/2.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-3",
+      "name": "Apr '25 Showcase #3 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAKgAAAAJjVP3dY1xLBDwKKrUg89ey",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/3.png",
+      "description": "2x Rage Towers; 3x Ground Bows & 1x Multi Bow; 2x Multi Inferno & 1x Single Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-4",
+      "name": "Apr '25 Showcase #4 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAMQAAAAJSue5ywZavNbVCRyUTmcnX",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/4.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-5",
+      "name": "Apr '25 Showcase #5 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAHwAAAAJ8xvcWIWsDHB5q7JmcwJQL",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/5.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-6",
+      "name": "Apr '25 Showcase #6 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAACgAAAAKxNvDd0JcLZrXH9owBKkUC",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/6.png",
+      "description": "2x Rage Towers; 2x Ground Bows & 2x Multi Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-7",
+      "name": "Apr '25 Showcase #7 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAACQAAAAKyXY1WIx573e6C0To20lxi",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/7.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-8",
+      "name": "Apr '25 Showcase #8 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAGAAAAAJ_bK71zmLuvMMZtAOcNktF",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/8.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-apr25-9",
+      "name": "Apr '25 Showcase #9 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAAgAAAALo-L7WJEwxts9jW3n-eXes",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/apr25/9.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Apr '25)",
+      "tags": [
+        "showcase",
+        "apr-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-fwa-basic",
+      "name": "FWA Basic (TH17)",
+      "town_hall": 17,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH17%3AWB%3AAAAAMwAAAAJvKqSJR0K6j5vKXNzKC0Eo",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 17.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-fwa-ice",
+      "name": "FWA Ice (TH17)",
+      "town_hall": 17,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH17%3AWB%3AAAAARQAAAAIypZObt0gsIWUMLV3d_4tf",
+      "description": "Farm War Alliance FWA Ice layout for Town Hall 17.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-ice"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-fwa-risingdawn",
+      "name": "FWA Rising Dawn (TH17)",
+      "town_hall": 17,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH17%3AWB%3AAAAAAwAAAAMN3c729i-fFM_Iux9TVs10",
+      "description": "Farm War Alliance FWA Rising Dawn layout for Town Hall 17.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-rising-dawn"
+      ],
+      "added": "2026-04-26",
+      "image": "https://i.imgur.com/6dZZo8V.jpeg"
+    },
+    {
+      "id": "th17-isa-jun25-1",
+      "name": "Jun '25 Showcase #1 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJrLe6BxIjxTCba9rG2W6R4",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/jun25/1.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Jun '25)",
+      "tags": [
+        "showcase",
+        "jun-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-jun25-2",
+      "name": "Jun '25 Showcase #2 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJryOJB3SmQ8AZuGhcwNvQd",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/jun25/2.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Jun '25)",
+      "tags": [
+        "showcase",
+        "jun-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-jun25-3",
+      "name": "Jun '25 Showcase #3 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJryOEcFYLZ7EcFbOG56hWP",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/jun25/3.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (Jun '25)",
+      "tags": [
+        "showcase",
+        "jun-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-1",
+      "name": "May '25 Showcase #1 (TH17)",
+      "town_hall": 17,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AHV%3AAAAAQQAAAAIjh5pi4t858P81FgWThKEv",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/1.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "legend"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-10",
+      "name": "May '25 Showcase #10 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAHAAAAAKGRKxcoPlQWNTo-RZUuZBF",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/10.png",
+      "description": "2x Rage Towers; 3x Ground Bows & 1x Multi Bow; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-11",
+      "name": "May '25 Showcase #11 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAACgAAAAK1hu5X-7O0tRe4OjDqkhen",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/11.png",
+      "description": "2x Rage Towers; 2x Ground Bows & 2x Multi Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-12",
+      "name": "May '25 Showcase #12 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAMQAAAAJXIfFCROPfEtN_f5cz-Xzf",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/12.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-13",
+      "name": "May '25 Showcase #13 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAKAAAAAJ1M2Ik-qLKqnq4CsV63lru",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/13.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-14",
+      "name": "May '25 Showcase #14 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAHwAAAAKA8q_YQGFjlHnitGigb_3y",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/14.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-15",
+      "name": "May '25 Showcase #15 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAHAAAAAKGhFZVf8p_L6fgB4S2_IKJ",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/15.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-16",
+      "name": "May '25 Showcase #16 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJnxJPJwOi5LmKlBJ_rcgB5",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/16.png",
+      "description": "2x Rage Towers; 2x Ground Bows & 2x Multi Bows; 2x Multi Inferno & 1x Single Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-17",
+      "name": "May '25 Showcase #17 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJn1f94W3FDI-MUBQbMKcX5",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/17.png",
+      "description": "2x Poison Towers; 4x Multi Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-18",
+      "name": "May '25 Showcase #18 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJn4yByONF9S4wEOkO-Exel",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/18.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-19",
+      "name": "May '25 Showcase #19 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJn-L0fNSIHrXVlV5468x-I",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/19.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-2",
+      "name": "May '25 Showcase #2 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAACQAAAAK2aBOuKDeCzEdRlAeOrd9e",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/2.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-20",
+      "name": "May '25 Showcase #20 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJn-jmy4wONKbpNA_TTReD6",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/20.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-21",
+      "name": "May '25 Showcase #21 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJoRSbeDzb5R6SNkLa52_pK",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/21.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-22",
+      "name": "May '25 Showcase #22 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJoVlTuD_y8R6Wzrw_egLzB",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/22.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-23",
+      "name": "May '25 Showcase #23 (TH17)",
+      "town_hall": 17,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AHV%3AAAAALAAAAAJoXvZhttu5a0ASPJnSZsi0",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/23.png",
+      "description": "2x Poison Towers; 2x Ground Bows & 2x Multi Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "legend"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-24",
+      "name": "May '25 Showcase #24 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJoZloB-k3Ig_4ckNoWmI6x",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/24.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-25",
+      "name": "May '25 Showcase #25 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJoi7op_egUnHDJRXSsuppt",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/25.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-26",
+      "name": "May '25 Showcase #26 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJoittWz5I2ioS4Oo1m2xbr",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/26.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-27",
+      "name": "May '25 Showcase #27 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJoi00NNPRMIXbtM1ND6hxd",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/27.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-28",
+      "name": "May '25 Showcase #28 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJoitvnlOT6vbr8uGc0qmEb",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/28.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-29",
+      "name": "May '25 Showcase #29 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAALAAAAAJp54LU0mS_uxwOPid2bhWm",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/29.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-3",
+      "name": "May '25 Showcase #3 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAKgAAAAJm9RPEB_jYvxO-sv3nZQjz",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/3.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-4",
+      "name": "May '25 Showcase #4 (TH17)",
+      "town_hall": 17,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AHV%3AAAAAIQAAAAJznxfyHg8U5e-3QROzx28r",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/4.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "legend"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-5",
+      "name": "May '25 Showcase #5 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAFwAAAAKI_EqVD5hzh4YNuqI3QYa2",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/5.png",
+      "description": "2x Poison Towers; 2x Ground Bows & 2x Multi Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-6",
+      "name": "May '25 Showcase #6 (TH17)",
+      "town_hall": 17,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AHV%3AAAAATAAAAAHZoyqr6z8d3RoE1NsMipuo",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/6.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "legend"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-7",
+      "name": "May '25 Showcase #7 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAAgAAAALtaMJODwcxg0MWTW9F5Jgr",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/7.png",
+      "description": "2x Rage Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-8",
+      "name": "May '25 Showcase #8 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAAEQAAAAKeOXl2U-8v1CsUA4fVJbRV",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/8.png",
+      "description": "1x Rage Tower & 1x Poison Tower; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-isa-may25-9",
+      "name": "May '25 Showcase #9 (TH17)",
+      "town_hall": 17,
+      "type": "War",
+      "link": "https://link.clashofclans.com/fi?action=OpenLayout&id=TH17%3AWB%3AAAAADAAAAAKdPf-Ssof1-4JmjE6yixto",
+      "image": "https://raw.githubusercontent.com/isabelle1309/COCBaseShowcase/main/images/may25/9.png",
+      "description": "2x Poison Towers; 4x Ground Bows; 3x Multi Inferno",
+      "builder": "isabelle1309/COCBaseShowcase (May '25)",
+      "tags": [
+        "showcase",
+        "may-2025",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-saa-2",
+      "name": "TH17 Farm Anti-2-Star #2",
+      "town_hall": 17,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH17%3AHV%3AAAAAUAAAAAHUoK5l96up4IvUCPRC3DIy",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/11/Top-Farming-Base-TH17-with-Link-Anti-2-Stars-Anti-3-stars-Hybrid-Layout-Clash-of-Clans-2024-02.webp",
+      "description": "TH17 farm layout. Categories: Anti 2 star, Farming, Hybrid.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "farming",
+        "hybrid"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-saa-1",
+      "name": "TH17 Farm Anti-Air #1",
+      "town_hall": 17,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH17%3AHV%3AAAAAUAAAAAHUoMh1qDHFf8Uk_RUy_MY9",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/11/Top-Farming-Base-TH17-with-Link-Hybrid-Anti-Air-Anti-2-stars-Anti-3-stars-Layout-Clash-of-Clans-01.webp",
+      "description": "TH17 farm layout. Categories: Anti air, Farming.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "farming"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th17-saa-3",
+      "name": "TH17 Trophy Anti-2-Star Anti-Air #3",
+      "town_hall": 17,
+      "type": "Trophy",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH17%3AHV%3AAAAAUAAAAAHUoEEQp00DXo7wpRLq9WxE",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/11/Top-Anti-3-stars-Base-TH17-with-Link-Legend-League-Anti-Air-Layout-Clash-of-Clans-03.webp",
+      "description": "TH17 trophy layout. Categories: Anti 2 star, Anti air, Anti trophy.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "anti-air",
+        "anti-trophy"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-fwa-basic",
+      "name": "FWA Basic (TH16)",
+      "town_hall": 16,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH16%3AWB%3AAAAAWQAAAAHYhYD8UAx4YzwvwSR5_kYp",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 16.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-fwa-ice",
+      "name": "FWA Ice (TH16)",
+      "town_hall": 16,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH16%3AWB%3AAAAAOwAAAAJXP10HE2M9wZ_fr0k-reMF",
+      "description": "Farm War Alliance FWA Ice layout for Town Hall 16.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-ice"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-fwa-risingdawn",
+      "name": "FWA Rising Dawn (TH16)",
+      "town_hall": 16,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH16%3AWB%3AAAAAWQAAAAHk4PFauz_R4khwdqjodM6b",
+      "description": "Farm War Alliance FWA Rising Dawn layout for Town Hall 16.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-rising-dawn"
+      ],
+      "added": "2026-04-26",
+      "image": "https://i.imgur.com/t8KI8vr.png"
+    },
+    {
+      "id": "th16-praz-reapercrew-home",
+      "name": "Praz \u2013 Reaper Crew Home",
+      "town_hall": 16,
+      "type": "Home Village",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH16%3AHV%3AAAAAPwAAAAJNYkjScY-gvQbTDxdlTf9P",
+      "description": "Compartmentalised TH16 home village from Praz (lvl 207, clan Reaper Crew). Centralised Town Hall + Eagle, ring of point defenses, balanced air defense placement.",
+      "builder": "Praz (Reaper Crew)",
+      "tags": [
+        "home-village",
+        "compartmented",
+        "centralised-th"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-saa-2",
+      "name": "TH16 Farm Anti-2-Star #2",
+      "town_hall": 16,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH16%3AHV%3AAAAADAAAAAKOv8AEpDGy0bh2KBLC0qcV",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/12/Top-Farming-Base-TH16-with-Link-Anti-2-Stars-Anti-3-stars-Hybrid-Layout-Clash-of-Clans-2024-02.webp",
+      "description": "TH16 farm layout. Categories: Anti 2 star, Farming, Hybrid.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "farming",
+        "hybrid"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-saa-1",
+      "name": "TH16 Farm Anti-2-Star Anti-Air #1",
+      "town_hall": 16,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH16%3AHV%3AAAAADAAAAAKOv7fsWSORpmUpMgmMV0Ko",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Farming-Base-TH16-with-Link-Hybrid-Anti-Air-Anti-2-stars-Anti-3-stars-Layout-Clash-of-Clans-01-2.webp",
+      "description": "TH16 farm layout. Categories: Anti 2 star, Anti air, Farming.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "anti-air",
+        "farming"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-romneedboba-coclayout-hv-1",
+      "name": "TH16 Legend HV #1 (RomNeedBoba/coclayout)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAABgAAAAKT-853PWJ4HQN3H3NkCMDA",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "via RomNeedBoba/coclayout (TH16)",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-chiraggamer7-hv-10",
+      "name": "TH16 Legend HV #10 (ChiragGamer7)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAATwAAAAG5FABBnV_uzpGivse7q88r",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "ChiragGamer7",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26",
+      "image": "Image/Townhall 16/b12.png"
+    },
+    {
+      "id": "th16-chiraggamer7-hv-11",
+      "name": "TH16 Legend HV #11 (ChiragGamer7)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAAEAAAAAJ5POFdlGR_QtNFtPVkPKZ0",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "ChiragGamer7",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26",
+      "image": "Image/Townhall 16/b18.png"
+    },
+    {
+      "id": "th16-chiraggamer7-hv-12",
+      "name": "TH16 Legend HV #12 (ChiragGamer7)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAACgAAAAKR2cyJQKjoun36Xuh2qP3D",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "ChiragGamer7",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26",
+      "image": "Image/Townhall 16/b28.png"
+    },
+    {
+      "id": "th16-chiraggamer7-hv-13",
+      "name": "TH16 Legend HV #13 (ChiragGamer7)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAADQAAAAJ-oC443u8cRl2G7wprj4E6",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "ChiragGamer7",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26",
+      "image": "Image/Townhall 16/b33.png"
+    },
+    {
+      "id": "th16-chiraggamer7-hv-14",
+      "name": "TH16 Legend HV #14 (ChiragGamer7)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAADQAAAAJ-oC8SUIFs0Vdr3NadHNcG",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "ChiragGamer7",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-chiraggamer7-hv-15",
+      "name": "TH16 Legend HV #15 (ChiragGamer7)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAADQAAAAJ-oDHWFLOnAqLhMZjNqLaT",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "ChiragGamer7",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-chiraggamer7-hv-16",
+      "name": "TH16 Legend HV #16 (ChiragGamer7)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAADQAAAAJ-oDLahbJeyhqUQ423D4_F",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "ChiragGamer7",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-romneedboba-coclayout-hv-2",
+      "name": "TH16 Legend HV #2 (RomNeedBoba/coclayout)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAABgAAAAKT-9ORup7zUYRATYik3cJM",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "via RomNeedBoba/coclayout (TH16)",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-romneedboba-coclayout-hv-3",
+      "name": "TH16 Legend HV #3 (RomNeedBoba/coclayout)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAABgAAAAKT-9Z5Z0GfrD8ONMRfQc1v",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "via RomNeedBoba/coclayout (TH16)",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-romneedboba-coclayout-hv-4",
+      "name": "TH16 Legend HV #4 (RomNeedBoba/coclayout)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAABgAAAAKT-9eZ56g5b8X0gfMNa6bT",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "via RomNeedBoba/coclayout (TH16)",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-romneedboba-coclayout-hv-5",
+      "name": "TH16 Legend HV #5 (RomNeedBoba/coclayout)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAABgAAAAKT-9jMc1pSWxzuhs29dEjN",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "via RomNeedBoba/coclayout (TH16)",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-romneedboba-coclayout-hv-6",
+      "name": "TH16 Legend HV #6 (RomNeedBoba/coclayout)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAABgAAAAKT-9oyHh2fi0iyXoFkPqSv",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "via RomNeedBoba/coclayout (TH16)",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-romneedboba-coclayout-hv-7",
+      "name": "TH16 Legend HV #7 (RomNeedBoba/coclayout)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAABgAAAAKT-9sJMiYMFpoaH5JiQfgr",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "via RomNeedBoba/coclayout (TH16)",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-romneedboba-coclayout-hv-8",
+      "name": "TH16 Legend HV #8 (RomNeedBoba/coclayout)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAABgAAAAKT-96v7yVvSmHkZOQosXn8",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "via RomNeedBoba/coclayout (TH16)",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-romneedboba-coclayout-hv-9",
+      "name": "TH16 Legend HV #9 (RomNeedBoba/coclayout)",
+      "town_hall": 16,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH16%3AHV%3AAAAABgAAAAKT--DDU_6jhnlCiPHWW76r",
+      "description": "TH16 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH16).",
+      "builder": "via RomNeedBoba/coclayout (TH16)",
+      "tags": [
+        "home-village",
+        "legend",
+        "th16"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th16-saa-3",
+      "name": "TH16 Trophy Anti-2-Star Anti-Air #3",
+      "town_hall": 16,
+      "type": "Trophy",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH16%3AHV%3AAAAADAAAAAKaBDq3elA1dpTYuZ8Z2gGZ",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/12/Top-Anti-3-stars-Base-TH16-with-Link-Legend-League-Anti-Air-Layout-Clash-of-Clans-03.webp",
+      "description": "TH16 trophy layout. Categories: Anti 2 star, Anti air, Anti trophy.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "anti-air",
+        "anti-trophy"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th15-fwa-basic",
+      "name": "FWA Basic (TH15)",
+      "town_hall": 15,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH15%3AWB%3AAAAAVAAAAAHixZ2x1n8Q5kcjKac5Ta3R",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 15.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th15-fwa-ice",
+      "name": "FWA Ice (TH15)",
+      "town_hall": 15,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH15%3AHV%3AAAAAEwAAAAKuO89vC1LYLpipf4JiEWcQ",
+      "description": "Farm War Alliance FWA Ice layout for Town Hall 15.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-ice"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th15-fwa-risingdawn",
+      "name": "FWA Rising Dawn (TH15)",
+      "town_hall": 15,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH15%3AWB%3AAAAAVAAAAAHvJKVnKw681zq_w9zZWZH4",
+      "description": "Farm War Alliance FWA Rising Dawn layout for Town Hall 15.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-rising-dawn"
+      ],
+      "added": "2026-04-26",
+      "image": "https://i.imgur.com/s77cbEK.png"
+    },
+    {
+      "id": "th15-saa-3",
+      "name": "TH15 Farm Anti-2-Star Anti-Air #3",
+      "town_hall": 15,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH15%3AHV%3AAAAATwAAAAHV85NqjO3Sj3BcecCYEOTa",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Farming-Base-TH15-with-Link-Anti-2-stars-Anti-3-stars-Anti-Air-Electro-Dragon-Hybrid-Layout-Clash-of-Clans-05.webp",
+      "description": "TH15 farm layout. Categories: Anti 2 star, Anti air, Farming.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "anti-air",
+        "farming"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th15-saa-1",
+      "name": "TH15 Hybrid Anti-2-Star #1",
+      "town_hall": 15,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH15%3AHV%3AAAAATwAAAAHV87EROWTTie5ta5YuXfcy",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Base-TH15-with-Link-Anti-2-stars-Anti-3-stars-Legend-League-Layout-Clash-of-Clans-03.webp",
+      "description": "TH15 hybrid layout. Categories: Anti 2 star, Hybrid.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "hybrid"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th15-saa-2",
+      "name": "TH15 Hybrid Anti-2-Star Anti-Air #2",
+      "town_hall": 15,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH15%3AHV%3AAAAATwAAAAHV859EIbIGdcDJFzekJnu5",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH15-with-Link-Anti-2-stars-Anti-3-stars-Anti-Air-Electro-Dragon-WarCWL-Layout-Clash-of-Clans-04.webp",
+      "description": "TH15 hybrid layout. Categories: Anti 2 star, Anti air, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "anti-air",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th15-gaming-with-akhil-hv-1",
+      "name": "TH15 Legend HV #1 (Gaming With Akhil)",
+      "town_hall": 15,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH15%3AHV%3AAAAATAAAAAGlyl9wKWB7uyWJf5xKIfGm",
+      "description": "TH15 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH15).",
+      "builder": "Gaming With Akhil",
+      "tags": [
+        "home-village",
+        "legend",
+        "th15"
+      ],
+      "added": "2026-04-26",
+      "image": "Image/Townhall 15/a2.png"
+    },
+    {
+      "id": "th15-gaming-with-akhil-hv-2",
+      "name": "TH15 Legend HV #2 (Gaming With Akhil)",
+      "town_hall": 15,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH15%3AHV%3AAAAATAAAAAGlyneiIt0kcuAJAUxUWttc",
+      "description": "TH15 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH15).",
+      "builder": "Gaming With Akhil",
+      "tags": [
+        "home-village",
+        "legend",
+        "th15"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th15-gaming-with-akhil-hv-3",
+      "name": "TH15 Legend HV #3 (Gaming With Akhil)",
+      "town_hall": 15,
+      "type": "Legend",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH15%3AHV%3AAAAATAAAAAGlyqcldwkG-gqG_5ceNEaa",
+      "description": "TH15 home village layout (Legend league style) sourced from RomNeedBoba/coclayout (TH15).",
+      "builder": "Gaming With Akhil",
+      "tags": [
+        "home-village",
+        "legend",
+        "th15"
+      ],
+      "added": "2026-04-26",
+      "image": "Image/Townhall 15/a9.png"
+    },
+    {
+      "id": "th14-fwa-basic",
+      "name": "FWA Basic (TH14)",
+      "town_hall": 14,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AWB%3AAAAAPQAAAAJQFTvvhxVFhpHEctRKa2RJ",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 14.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th14-fwa-ice",
+      "name": "FWA Ice (TH14)",
+      "town_hall": 14,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AWB%3AAAAABQAAAALwM9VrwVsheMIv6RSHei02",
+      "description": "Farm War Alliance FWA Ice layout for Town Hall 14.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-ice"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th14-fwa-risingdawn",
+      "name": "FWA Rising Dawn (TH14)",
+      "town_hall": 14,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AWB%3AAAAAPQAAAAJdoO-ODiQQFw1-wdLoP0pi",
+      "description": "Farm War Alliance FWA Rising Dawn layout for Town Hall 14.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-rising-dawn"
+      ],
+      "added": "2026-04-26",
+      "image": "https://i.imgur.com/GAQkHDb.jpeg"
+    },
+    {
+      "id": "th14-saa-1",
+      "name": "TH14 Farm Anti-Air #1",
+      "town_hall": 14,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AHV%3AAAAAGwAAAAJ2TpO1gXxh9IfgvnCgAPVD",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Farming-Base-TH14-with-Link-Anti-Air-Hybrid-Legend-League-Layout-Clash-of-Clans-01.webp",
+      "description": "TH14 farm layout. Categories: Anti air, Farming.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "farming"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th14-saa-2",
+      "name": "TH14 Hybrid Anti-2-Star #2",
+      "town_hall": 14,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH14%3AHV%3AAAAAGwAAAAJ2TpomZ3XT9PyE8jNkJqsS",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH14-with-Link-Anti-Air-Electro-Dragon-Anti-2-stars-Anti-3-stars-WarCWL-Layout-Clash-of-Clans-02.webp",
+      "description": "TH14 hybrid layout. Categories: Anti 2 star, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th14-saa-3",
+      "name": "TH14 Trophy Anti-Air #3",
+      "town_hall": 14,
+      "type": "Trophy",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH14%3AHV%3AAAAAGwAAAAKB8OitxUEZ1T5ePBQj8xoS",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Defense-Base-TH14-with-Link-Anti-2-stars-Anti-3-stars-Anti-Trophy-Layout-Clash-of-Clans-03.webp",
+      "description": "TH14 trophy layout. Categories: Anti air, Anti trophy.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "anti-trophy"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th13-fwa-basic",
+      "name": "FWA Basic (TH13)",
+      "town_hall": 13,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AWB%3AAAAANQAAAAJg3K_0TUhkZz6SfZeONbRt",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 13.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th13-fwa-ice",
+      "name": "FWA Ice (TH13)",
+      "town_hall": 13,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AWB%3AAAAAFQAAAAKohLEMyrrJ9QfB957kpGAd",
+      "description": "Farm War Alliance FWA Ice layout for Town Hall 13.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-ice"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th13-fwa-risingdawn",
+      "name": "FWA Rising Dawn (TH13)",
+      "town_hall": 13,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH13%3AWB%3AAAAANQAAAAJujuJ9iAbWmC4pLZE2Cx5n",
+      "description": "Farm War Alliance FWA Rising Dawn layout for Town Hall 13.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-rising-dawn"
+      ],
+      "added": "2026-04-26",
+      "image": "https://i.imgur.com/dxLW2kF.jpeg"
+    },
+    {
+      "id": "th13-saa-1",
+      "name": "TH13 Farm Anti-3-Star Anti-Air #1",
+      "town_hall": 13,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH13%3AHV%3AAAAASgAAAAHn-Nun2SBZJ_vb0k3nGamu",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Hybrid-Base-TH13-with-Link-Anti-Air-Anti-3-stars-Layout-Clash-of-Clans-01.webp",
+      "description": "TH13 farm layout. Categories: Anti 3 star, Anti air, Farming.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-3-star",
+        "anti-air",
+        "farming"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th13-saa-3",
+      "name": "TH13 Hybrid Anti-2-Star Anti-Air #3",
+      "town_hall": 13,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH13%3AHV%3AAAAASgAAAAHn-OTMwGWzezz3yUFukcCp",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Defence-Base-TH13-with-Link-Anti-2-stars-Anti-3-stars-Anti-Air-Layout-Clash-of-Clans-03.webp",
+      "description": "TH13 hybrid layout. Categories: Anti 2 star, Anti air, Hybrid.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "anti-air",
+        "hybrid"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th13-saa-2",
+      "name": "TH13 Trophy Anti-3-Star #2",
+      "town_hall": 13,
+      "type": "Trophy",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH13%3AHV%3AAAAASgAAAAHn-N5h1AYZsvSoAsPo4BBI",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Farming-Base-TH13-with-Link-Anti-Air-Electro-Dragon-Anti-3-stars-Hybrid-Layout-Clash-of-Clans-02.webp",
+      "description": "TH13 trophy layout. Categories: Anti 3 star, Anti trophy, Farming.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-3-star",
+        "anti-trophy",
+        "farming"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th12-fwa-basic",
+      "name": "FWA Basic (TH12)",
+      "town_hall": 12,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH12%3AHV%3AAAAABgAAAALxrYMCIguGWafzazqpHIsi",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 12.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th12-fwa-ice",
+      "name": "FWA Ice (TH12)",
+      "town_hall": 12,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH12%3AHV%3AAAAABgAAAALtAVrzM_hG8i6XgswLkRrO",
+      "description": "Farm War Alliance FWA Ice layout for Town Hall 12.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-ice"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th12-fwa-risingdawn",
+      "name": "FWA Rising Dawn (TH12)",
+      "town_hall": 12,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH12%3AWB%3AAAAAAAAAAAMYxd2JLIPabs_m1AJOK9Pr",
+      "description": "Farm War Alliance FWA Rising Dawn layout for Town Hall 12.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-rising-dawn"
+      ],
+      "added": "2026-04-26",
+      "image": "https://i.imgur.com/bCISCn1.png"
+    },
+    {
+      "id": "th12-saa-3",
+      "name": "TH12 Hybrid Anti-2-Star Anti-Air #3",
+      "town_hall": 12,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH12%3AHV%3AAAAABgAAAAK8eBCLJPqCcXF8Z7zauRNc",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH12-with-Link-Anti-2-stars-Anti-3-stars-Anti-Air-Electro-Dragon-WarCWL-Layout-Clash-of-Clans-03.webp",
+      "description": "TH12 hybrid layout. Categories: Anti 2 star, Anti air, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "anti-air",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th12-saa-1",
+      "name": "TH12 Hybrid Anti-3-Star Anti-Air #1",
+      "town_hall": 12,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH12%3AHV%3AAAAABgAAAAK8eAlK4oilkmI5GI5Aud4p",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Hybrid-Base-TH12-with-Link-Anti-3-stars-Anti-Air-Layout-Clash-of-Clans-01.webp",
+      "description": "TH12 hybrid layout. Categories: Anti 3 star, Anti air, Hybrid.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-3-star",
+        "anti-air",
+        "hybrid"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th12-saa-2",
+      "name": "TH12 Trophy Anti-3-Star Anti-Air #2",
+      "town_hall": 12,
+      "type": "Trophy",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH12%3AHV%3AAAAABgAAAAK8eA0AL16oMLsgVh7i07yA",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Anti-Loot-Base-TH12-with-Link-Anti-Air-Anti-3-stars-Unbeatable-Layout-Clash-of-Clans-02.webp",
+      "description": "TH12 trophy layout. Categories: Anti 3 star, Anti air, Anti trophy.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-3-star",
+        "anti-air",
+        "anti-trophy"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th11-fwa-basic",
+      "name": "FWA Basic (TH11)",
+      "town_hall": 11,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH11%3AWB%3AAAAAJQAAAAKdWWT-kVMWijtjXI3Ieeeu",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 11.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th11-fwa-ice",
+      "name": "FWA Ice (TH11)",
+      "town_hall": 11,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH11%3AWB%3AAAAAUAAAAAHtcjReuK9ziTJUWSZFre-O",
+      "description": "Farm War Alliance FWA Ice layout for Town Hall 11.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-ice"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th11-fwa-risingdawn",
+      "name": "FWA Rising Dawn (TH11)",
+      "town_hall": 11,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH11%3AWB%3AAAAAUAAAAAH2lvxn0AFoRDXqRUyoDxWd",
+      "description": "Farm War Alliance FWA Rising Dawn layout for Town Hall 11.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-rising-dawn"
+      ],
+      "added": "2026-04-26",
+      "image": "https://i.imgur.com/APZjSyh.png"
+    },
+    {
+      "id": "th11-saa-3",
+      "name": "TH11 Farm Anti-Air #3",
+      "town_hall": 11,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH11%3AHV%3AAAAARAAAAAIFlWaIox-tP_NrZcmjngaz",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Farming-Base-TH11-with-Link-Anti-2-stars-Anti-Air-Hybrid-Layout-Clash-of-Clans-03.webp",
+      "description": "TH11 farm layout. Categories: Anti air, Farming.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "farming"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th11-saa-2",
+      "name": "TH11 Hybrid Anti-2-Star Anti-Air #2",
+      "town_hall": 11,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH11%3AHV%3AAAAARAAAAAIFlVuFlbknNI3a3RXy6X9a",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH11-with-Link-Anti-Air-Anti-Everything-WarCWL-Layout-Clash-of-Clans-02.webp",
+      "description": "TH11 hybrid layout. Categories: Anti 2 star, Anti air, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "anti-air",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th11-saa-1",
+      "name": "TH11 Trophy Anti-Air #1",
+      "town_hall": 11,
+      "type": "Trophy",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH11%3AHV%3AAAAARAAAAAIFlVMLiJyE4zLHXXI0ecVI",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-Defense-Base-TH11-with-Link-Anti-3-stars-Anti-Air-Hybrid-Anti-Trophy-Layout-Clash-of-Clans-01.webp",
+      "description": "TH11 trophy layout. Categories: Anti air, Anti trophy, Farming.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "anti-trophy",
+        "farming"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th10-fwa-basic",
+      "name": "FWA Basic (TH10)",
+      "town_hall": 10,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH10%3AWB%3AAAAASwAAAAHxz3UQ1NJeeTS0DGN61GmR",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 10.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th10-fwa-ice",
+      "name": "FWA Ice (TH10)",
+      "town_hall": 10,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH10%3AWB%3AAAAAOgAAAAJbG-PI3Fx8VMdymt9wQyGP",
+      "description": "Farm War Alliance FWA Ice layout for Town Hall 10.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-ice"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th10-fwa-risingdawn",
+      "name": "FWA Rising Dawn (TH10)",
+      "town_hall": 10,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH10%3AWB%3AAAAAOgAAAAJh_-F870fFMcVCr_wSnsEY",
+      "description": "Farm War Alliance FWA Rising Dawn layout for Town Hall 10.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-rising-dawn"
+      ],
+      "added": "2026-04-26",
+      "image": "https://i.imgur.com/4g893Yt.jpeg"
+    },
+    {
+      "id": "th10-saa-2",
+      "name": "TH10 Hybrid #2",
+      "town_hall": 10,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH10%3AHV%3AAAAAWwAAAAG0gmDxA8uQFFvp0nF-zvRO",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH10-with-Link-Anti-Air-Legend-League-WarCWL-Layout-Clash-of-Clans-02.webp",
+      "description": "TH10 hybrid layout. Categories: War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th10-saa-3",
+      "name": "TH10 Hybrid Anti-3-Star #3",
+      "town_hall": 10,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH10%3AHV%3AAAAAWwAAAAG0goAcRG-SZDAi0CI6nnwb",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH10-with-Link-Hybrid-Anti-3-stars-Anti-Air-WarCWL-Layout-Clash-of-Clans-03.webp",
+      "description": "TH10 hybrid layout. Categories: Anti 3 star, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-3-star",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th10-saa-1",
+      "name": "TH10 Hybrid Anti-Air #1",
+      "town_hall": 10,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH10%3AHV%3AAAAAWwAAAAG0glOO-sgtOD03WtPIMAfU",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH10-with-Link-Anti-Air-Dragon-WarCWL-Layout-Clash-of-Clans-01.webp",
+      "description": "TH10 hybrid layout. Categories: Anti air, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th9-fwa-basic",
+      "name": "FWA Basic (TH9)",
+      "town_hall": 9,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH9%3AWB%3AAAAANQAAAAJg3suFcORqtzL2m38RiJuD",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 9.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th9-fwa-ice",
+      "name": "FWA Ice (TH9)",
+      "town_hall": 9,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH9%3AWB%3AAAAAGAAAAAKguigWRLLurILLBvVA5rQE",
+      "description": "Farm War Alliance FWA Ice layout for Town Hall 9.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-ice"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th9-saa-1",
+      "name": "TH9 Hybrid #1",
+      "town_hall": 9,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH9%3AHV%3AAAAAFwAAAAJ6ll-pTgXyaEItnGsrvzZv",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH9-with-Link-Anti-Air-WarCWL-layout-Clash-of-Clans-01.webp",
+      "description": "TH9 hybrid layout. Categories: War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th9-saa-2",
+      "name": "TH9 Hybrid Anti-Air #2",
+      "town_hall": 9,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH9%3AHV%3AAAAAFwAAAAJ6lmsnxh73P-LA9PkcqXSK",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH9-with-Link-Anti-Air-WarCWL-Layout-Clash-of-Clans-02.webp",
+      "description": "TH9 hybrid layout. Categories: Anti air, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th9-saa-3",
+      "name": "TH9 Hybrid Anti-Air #3",
+      "town_hall": 9,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH9%3AHV%3AAAAAFwAAAAJ6lnGQDHJ56KzrrqIaZGlF",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH9-with-Link-Anti-Air-Hybrid-WarCWL-Layout-Clash-of-Clans-03.webp",
+      "description": "TH9 hybrid layout. Categories: Anti air, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th8-fwa-basic",
+      "name": "FWA Basic (TH8)",
+      "town_hall": 8,
+      "type": "FWA War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH8%3AWB%3AAAAAKgAAAAKANkTLQf__hePWp7JBwmVc",
+      "description": "Farm War Alliance FWA Basic layout for Town Hall 8.",
+      "builder": "tonykslee/ClashCookies (FWA seed data)",
+      "tags": [
+        "fwa",
+        "war",
+        "fwa-basic"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th8-saa-2",
+      "name": "TH8 Hybrid Anti-2-Star #2",
+      "town_hall": 8,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH8%3AHV%3AAAAAXAAAAAGgUI8rA6AZNyIGB5pTn-Fd",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH8-with-Link-Anti-2-stars-Anti-3-stars-WarCWL-Layout-Clash-of-Clans-02.webp",
+      "description": "TH8 hybrid layout. Categories: Anti 2 star, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th8-saa-3",
+      "name": "TH8 Hybrid Anti-2-Star #3",
+      "town_hall": 8,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH8%3AHV%3AAAAAXAAAAAGgUJKknvgFlIGdwJCYIOAd",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH8-with-Link-Anti-Air-Electro-Dragon-Anti-2-stars-Anti-3-stars-WarCWL-layout-Clash-of-Clans03.webp",
+      "description": "TH8 hybrid layout. Categories: Anti 2 star, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th8-saa-1",
+      "name": "TH8 Hybrid Anti-2-Star Anti-Air #1",
+      "town_hall": 8,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH8%3AHV%3AAAAAXAAAAAGgUHxgGIaX3ex8mwkLFONj",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH8-with-Link-Anti-2-Stars-Anti-3-Stars-Anti-Air-WarCWL-layout-Clash-of-Clans-01.webp",
+      "description": "TH8 hybrid layout. Categories: Anti 2 star, Anti air, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "anti-air",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th7-saa-1",
+      "name": "TH7 Farm Anti-Air #1",
+      "town_hall": 7,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH7%3AHV%3AAAAAKQAAAAJqq9FoBcBxmarJbsVzqiJA",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Defense-Anti-Trophy-Base-TH7-with-Link-Anti-Air-WarCWL-layout-Clash-of-Clans-01.webp",
+      "description": "TH7 farm layout. Categories: Anti air, Farming.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "farming"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th7-saa-2",
+      "name": "TH7 Farm Anti-Air #2",
+      "town_hall": 7,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH7%3AHV%3AAAAAKQAAAAJqrAhHpZ4BFG5UhnkC5dh6",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Defense-Anti-Trophy-Base-TH7-with-Link-Anti-Air-WarCWL-Layout-Clash-of-Clans-02.webp",
+      "description": "TH7 farm layout. Categories: Anti air, Farming.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "farming"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th7-saa-3",
+      "name": "TH7 Hybrid Anti-Air #3",
+      "town_hall": 7,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH7%3AHV%3AAAAAKQAAAAJqrBFTEu_qHQOzo4qE0KXY",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH7-with-Link-Anti-Air-WarCWL-Layout-Clash-of-Clans-03.webp",
+      "description": "TH7 hybrid layout. Categories: Anti air, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th6-saa-1",
+      "name": "TH6 War #1",
+      "town_hall": 6,
+      "type": "War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH6%3AWB%3AAAAAMQAAAAI8Sy9KYIVJGlJTm1o4b2g9",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH6-with-Link-WarCWL-Layout-Clash-of-Clans-01.webp",
+      "description": "TH6 war layout. Categories: War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th6-saa-2",
+      "name": "TH6 War Anti-2-Star #2",
+      "town_hall": 6,
+      "type": "War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH6%3AWB%3AAAAAMQAAAAI8SzYnfwM6MHfEqwkxVgr_",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH6-with-Link-Anti-2-stars-Anti-3-stars-Anti-Air-WarCWL-layout-Clash-of-Clans-02.webp",
+      "description": "TH6 war layout. Categories: Anti 2 star, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th6-saa-3",
+      "name": "TH6 War Anti-2-Star Anti-Air #3",
+      "town_hall": 6,
+      "type": "War",
+      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH6%3AWB%3AAAAAMQAAAAI8Sz8q40aHiVr8Ce6Mx_lI",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH6-with-Link-Hybrid-Anti-2-Stars-Anti-3-Stars-WarCWL-Layout-Clash-of-Clans-03.webp",
+      "description": "TH6 war layout. Categories: Anti 2 star, Anti air, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "anti-air",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th5-saa-1",
+      "name": "TH5 Farm Anti-3-Star #1",
+      "town_hall": 5,
+      "type": "Farm",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH5%3AHV%3AAAAAJAAAAAJhBdxJvWSjouuT54gnXq64",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH5-with-Link-Anti-3-stars-Anti-air-WarCWL-layouts-Clash-of-Clans-01.webp",
+      "description": "TH5 farm layout. Categories: TH05, Anti 3 star, Farming, Hybrid.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "th05",
+        "anti-3-star",
+        "farming",
+        "hybrid"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th5-saa-2",
+      "name": "TH5 Hybrid Anti-2-Star #2",
+      "town_hall": 5,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH5%3AHV%3AAAAAJAAAAAJcf9JVXfo-F_7Po2uRGv6m",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH5-with-Link-Anti-2-stars-Anti-3-stars-Anti-Air-WarCWL-Layouts-Clash-of-Clans-02.webp",
+      "description": "TH5 hybrid layout. Categories: Anti 2 star, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th5-saa-3",
+      "name": "TH5 War Anti-2-Star #3",
+      "town_hall": 5,
+      "type": "War",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH5%3AWB%3AAAAAJAAAAAJhBreZIJO69m2EGs8baI3Q",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH5-with-Link-Anti-2-stars-Anti-3-stars-Anti-Air-WarCWL-Layouts-Clash-of-Clans-03.webp",
+      "description": "TH5 war layout. Categories: Anti 2 star, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-2-star",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th4-saa-2",
+      "name": "TH4 Hybrid #2",
+      "town_hall": 4,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH4%3AHV%3AAAAAIgAAAAJhBJ6f-v229BXRBYJ4omsF",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH4-with-Link-Anti-Air-WarCWL-Layout-Clash-of-Clans-02.webp",
+      "description": "TH4 hybrid layout. Categories: War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th4-saa-3",
+      "name": "TH4 Hybrid Anti-Air #3",
+      "town_hall": 4,
+      "type": "Hybrid",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH4%3AHV%3AAAAAIgAAAAJhBKjQdZDQIlTsdAIrfNUE",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH4-with-Link-Hybrid-Anti-3-stars-WarCWL-Layout-Clash-of-Clans-03.webp",
+      "description": "TH4 hybrid layout. Categories: Anti air, War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "anti-air",
+        "war"
+      ],
+      "added": "2026-04-26"
+    },
+    {
+      "id": "th4-saa-1",
+      "name": "TH4 War #1",
+      "town_hall": 4,
+      "type": "War",
+      "link": "https://link.clashofclans.com/en/?action=OpenLayout&id=TH4%3AWB%3AAAAAIgAAAAJhBJlWbYSobOlCmudeyeO2",
+      "image": "https://bases-coc.com/wp-content/uploads/2024/04/Top-War-Base-TH4-with-Link-Anti-Air-WarCWL-Layout-Clash-of-Clans-01.webp",
+      "description": "TH4 war layout. Categories: War.",
+      "builder": "saadahmed0147/coc_bases",
+      "tags": [
+        "war"
+      ],
+      "added": "2026-04-26"
+    }
+  ]
 }
