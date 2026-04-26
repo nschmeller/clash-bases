@@ -20,6 +20,38 @@ Clash** to load a layout straight into the game via the official
 - There is no backend, no database and no analytics. The repo *is* the
   database.
 
+## Catalogue origin
+
+The 140-entry seed catalogue was assembled exclusively from
+**permissively-published GitHub repositories**, each entry credited to
+its upstream source in the `builder` field:
+
+| Source                                 | TH levels   | Style                                |
+| -------------------------------------- | ----------- | ------------------------------------ |
+| `tonykslee/ClashCookies`               | TH8–TH18    | FWA war seed (Basic/Ice/Rising Dawn) |
+| `saadahmed0147/coc_bases`              | TH4–TH17    | Categorised farming/anti-2/anti-3    |
+| `isabelle1309/COCBaseShowcase` Apr–Jun '25 | TH17    | Monthly war/legend showcase          |
+| `RomNeedBoba/coclayout`                | TH15, TH16  | HV / Legend league                   |
+| `topusapp/topusapp.github.io` (YT)     | TH18        | KLAWKLA YouTube share                |
+| User-submitted (e.g. Praz)             | TH16        | Hand-picked                          |
+
+The TH18 ceiling is currently low (4 entries) because TH18 only
+released in November 2025. Contributions of newer Legend / War TH18
+links are very welcome.
+
+### Notes on aggregation tactics
+
+Every layout *catalogue* site (cocbases, basemelon, blueprintcoc,
+clashchamps, clashcodes, clashofclans-layouts, etc.) is behind
+Cloudflare and refuses non-browser traffic, so we cannot programmatically
+mirror them. Discovery instead happens through **GitHub Code Search**
+(`mcp__github__search_code`) for the literal substring
+`"link.clashofclans.com" "OpenLayout"`, then `raw.githubusercontent.com`
+fetches against any candidate file paths. The same approach has been
+tried against Wayback Machine, Reddit, Pinterest, DuckDuckGo HTML, Bing
+HTML, and unauth'd GitHub Code Search — all 403/blocked from the
+sandbox.
+
 ## Where to find bases
 
 If you don't have your own layout to share, these are well-known
