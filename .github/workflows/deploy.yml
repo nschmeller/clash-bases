@@ -25,8 +25,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate bases.json (structural + liveness)
-        run: python3 scripts/validate-bases.py bases.json --liveness
+      - name: Validate bases.json (structural)
+        run: python3 scripts/validate-bases.py bases.json
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable

@@ -1,10 +1,13 @@
 use std::collections::{BTreeMap, BTreeSet};
+use std::rc::Rc;
 
 use gloo_net::http::Request;
 use serde::Deserialize;
 use wasm_bindgen::JsCast;
 use web_sys::{HtmlInputElement, HtmlSelectElement};
 use yew::prelude::*;
+
+const PAGE_SIZE: usize = 60;
 
 #[derive(Clone, PartialEq, Deserialize, Debug)]
 pub struct Base {
@@ -24,8 +27,6 @@ pub struct Base {
     pub added: String,
     #[serde(default)]
     pub image: Option<String>,
-    #[serde(default)]
-    pub last_verified: Option<String>,
 }
 
 #[derive(Deserialize)]
@@ -41,12 +42,15 @@ enum ThTab {
 
 #[function_component(App)]
 fn app() -> Html {
-    let bases = use_state(Vec::<Base>::new);
+    // `bases` is wrapped in Rc so cloning the state handle on each render
+    // does not deep-copy the (5_000+ entry) vector.
+    let bases = use_state(|| Rc::<Vec<Base>>::new(Vec::new()));
     let loading = use_state(|| true);
     let error = use_state(|| Option::<String>::None);
     let tab = use_state(|| Option::<ThTab>::None);
     let filter_type = use_state(String::new);
     let search = use_state(String::new);
+    let visible = use_state(|| PAGE_SIZE);
 
     {
         let bases = bases.clone();
@@ -72,7 +76,7 @@ fn app() -> Html {
                                 .map(ThTab::Th)
                                 .unwrap_or(ThTab::All);
                             tab.set(Some(default_tab));
-                            bases.set(list);
+                            bases.set(Rc::new(list));
                             loading.set(false);
                         }
                         Err(e) => {
@@ -90,32 +94,45 @@ fn app() -> Html {
         });
     }
 
-    let counts_per_th: BTreeMap<u8, usize> = {
+    // Derived collections — memoised against the bases vector.  Without this,
+    // every keystroke in the search box would walk all 5k entries to rebuild
+    // the type list and TH counts.
+    let counts_per_th = use_memo(bases.clone(), |bs| {
         let mut m: BTreeMap<u8, usize> = BTreeMap::new();
-        for b in bases.iter() {
+        for b in bs.iter() {
             *m.entry(b.town_hall).or_default() += 1;
         }
         m
-    };
-    // TH levels descending so TH18 sits leftmost.
+    });
     let town_halls: Vec<u8> = counts_per_th.keys().rev().copied().collect();
-
-    let types: Vec<String> = {
-        let s: BTreeSet<String> = bases.iter().map(|b| b.base_type.clone()).collect();
-        s.into_iter().collect()
-    };
+    let types = use_memo(bases.clone(), |bs| {
+        let s: BTreeSet<&str> = bs.iter().map(|b| b.base_type.as_str()).collect();
+        s.into_iter().map(str::to_owned).collect::<Vec<_>>()
+    });
 
     let active_tab = tab.unwrap_or(ThTab::All);
 
-    let filtered: Vec<Base> = bases
+    // Reset pagination back to PAGE_SIZE whenever the filters change.
+    {
+        let visible = visible.clone();
+        let deps = (active_tab, (*filter_type).clone(), (*search).clone());
+        use_effect_with(deps, move |_| {
+            visible.set(PAGE_SIZE);
+            || ()
+        });
+    }
+
+    let q = (*search).trim().to_lowercase();
+    let filter_type_str: &str = &filter_type;
+
+    let matches: Vec<&Base> = bases
         .iter()
         .filter(|b| match active_tab {
             ThTab::All => true,
             ThTab::Th(t) => b.town_hall == t,
         })
-        .filter(|b| filter_type.is_empty() || b.base_type.eq_ignore_ascii_case(&filter_type))
+        .filter(|b| filter_type_str.is_empty() || b.base_type.eq_ignore_ascii_case(filter_type_str))
         .filter(|b| {
-            let q = search.trim().to_lowercase();
             if q.is_empty() {
                 return true;
             }
@@ -124,8 +141,11 @@ fn app() -> Html {
                 || b.description.to_lowercase().contains(&q)
                 || b.tags.iter().any(|t| t.to_lowercase().contains(&q))
         })
-        .cloned()
         .collect();
+
+    let total_matches = matches.len();
+    let shown = (*visible).min(total_matches);
+    let visible_slice = &matches[..shown];
 
     let on_search = {
         let search = search.clone();
@@ -149,6 +169,13 @@ fn app() -> Html {
         Callback::from(move |_: MouseEvent| tab.set(Some(t)))
     };
 
+    let on_load_more = {
+        let visible = visible.clone();
+        Callback::from(move |_: MouseEvent| {
+            visible.set(*visible + PAGE_SIZE);
+        })
+    };
+
     let total = bases.len();
 
     let body = if *loading {
@@ -166,13 +193,30 @@ fn app() -> Html {
                 </p>
             </div>
         }
-    } else if filtered.is_empty() {
+    } else if total_matches == 0 {
         html! { <p class="status">{ "No bases match your filters." }</p> }
     } else {
+        let load_more = if shown < total_matches {
+            let remaining = total_matches - shown;
+            html! {
+                <div class="load-more-wrap">
+                    <button class="btn" onclick={on_load_more}>
+                        { format!("Show more ({remaining} remaining)") }
+                    </button>
+                </div>
+            }
+        } else {
+            Html::default()
+        };
         html! {
-            <div class="grid">
-                { for filtered.iter().map(|b| html! { <BaseCard base={b.clone()} /> }) }
-            </div>
+            <>
+                <div class="grid">
+                    { for visible_slice.iter().map(|b| html! {
+                        <BaseCard key={b.id.clone()} base={(*b).clone()} />
+                    }) }
+                </div>
+                { load_more }
+            </>
         }
     };
 
@@ -228,7 +272,9 @@ fn app() -> Html {
                         <option value={t.clone()} selected={*filter_type == *t}>{ t.clone() }</option>
                     }) }
                 </select>
-                <span class="count">{ format!("{} base(s)", filtered.len()) }</span>
+                <span class="count">
+                    { format!("{shown} of {total_matches} base(s)") }
+                </span>
             </section>
 
             <main>{ body }</main>
@@ -278,7 +324,7 @@ fn base_card(props: &BaseCardProps) -> Html {
         <article class="card">
             if let Some(img) = &b.image {
                 <a class="thumb" href={b.link.clone()} target="_blank" rel="noopener noreferrer">
-                    <img src={img.clone()} alt={format!("Preview of {}", &b.name)} loading="lazy" />
+                    <img src={img.clone()} alt={format!("Preview of {}", &b.name)} loading="lazy" decoding="async" />
                 </a>
             }
             <div class="card-header">
