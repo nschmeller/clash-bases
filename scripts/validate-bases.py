@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
 Validate bases.json -- schema, structural invariants of every COC layout
-link, optional liveness probing against link.clashofclans.com, and
-optional staleness detection.
+link, and (optionally) basic reachability of the share endpoint.
 
 Structural checks
 -----------------
@@ -20,56 +19,41 @@ always decodes to a fixed-size payload:
     - bytes 8..24 are an opaque 16-byte tag (likely an HMAC)
 
 The TH<n> embedded in the URL is also cross-checked against the
-`town_hall` field of the JSON entry.
+`town_hall` field of the JSON entry.  Ids and links must be unique
+across the catalogue.
 
-Liveness probing
-----------------
-Pass `--liveness` to additionally fetch each layout URL from
-link.clashofclans.com and inspect the response body.  Historically the
-share endpoint rendered layout-specific OpenGraph metadata only when
-Supercell recognised the id, so a body-content heuristic could
-distinguish real ids from fakes.
+Liveness probing (`--liveness`)
+-------------------------------
+Optional and informational only.  As of 2026-04 the Supercell share
+endpoint serves a byte-identical 69_438-byte landing page for every
+TH/blob combination -- including syntactically correct but
+cryptographically invalid blobs -- so a 200 response only confirms the
+endpoint is reachable, not that a specific id is real.  Verified by
+comparing four known-good ids (FWA Basic/Ice/Rising Dawn TH18 and
+KLAWKLA TH18) against an all-zero blob: identical body, identical
+`<title>Clash of Clans</title>`, identical `og:image`.  Only the in-app
+deep-link handler can resolve the HMAC.
 
-That stopped working in 2026.  As of 2026-04 the endpoint serves a
-byte-identical (Cloudfront-cached) generic landing page for *every*
-combination of TH and blob -- including blobs that are syntactically
-correct but cryptographically invalid.  Verified by comparing four
-known-good ids (FWA Basic/Ice/Rising Dawn TH18 and KLAWKLA TH18) against
-an all-zero blob: all four 200 OK, all four 69_438 bytes, all four with
-the same `<title>Clash of Clans</title>` and generic
-`og:image=images/game/opengraph.jpg`.  Only the in-app deep-link handler
-on the player's device can actually resolve the HMAC tag.
-
-The probe still runs (it can detect TLS / DNS / 404 regressions), but
-it can no longer prove a specific id is real.  Any liveness failure is
-reported but does not fail the run unless `--strict-liveness` is
-passed.
-
-Staleness
----------
-Each successful liveness check stamps `last_verified: YYYY-MM-DD` on the
-entry (with `--update-verified`).  `--max-age-days N` flags any entry
-whose `last_verified` (or `added`, if it has never been verified) is
-older than N days, so a periodic CI cron can surface entries that have
-not been recently confirmed live.
+The probe runs in parallel (16 workers); it can detect TLS / DNS / 4xx
+regressions at the share endpoint.  Liveness failures are reported but
+don't fail the run unless `--strict-liveness` is passed.
 
 Usage
 -----
     python3 scripts/validate-bases.py [bases.json]
     python3 scripts/validate-bases.py bases.json --liveness
-    python3 scripts/validate-bases.py bases.json --liveness --update-verified
-    python3 scripts/validate-bases.py bases.json --max-age-days 90
+    python3 scripts/validate-bases.py bases.json --liveness --strict-liveness
 """
 
 from __future__ import annotations
 
 import argparse
 import base64
-import datetime as _dt
+import concurrent.futures
 import json
 import re
 import sys
-import urllib.parse
+import urllib.error
 import urllib.request
 from collections import Counter
 from pathlib import Path
@@ -81,6 +65,8 @@ URL_RE = re.compile(
 ALLOWED_SLOTS = {1, 2, 3}
 EXPECTED_BLOB_CHARS = 32
 EXPECTED_PAYLOAD_BYTES = 24
+LIVENESS_WORKERS = 16
+LIVENESS_TIMEOUT = 10.0
 
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
@@ -133,21 +119,8 @@ def validate_link(link: str, declared_th: int) -> list[str]:
     return errors
 
 
-def parse_link_meta(link: str) -> tuple[int, str]:
-    m = URL_RE.match(link)
-    assert m, link
-    return int(m.group("th")), m.group("v")
-
-
-def liveness_probe(link: str, timeout: float = 10.0) -> tuple[bool, str]:
-    """
-    Probe `link` and decide whether the share endpoint accepted the URL.
-
-    As of 2026-04 the endpoint returns the same 69_438-byte landing page
-    for every combination of TH/blob, so this can no longer verify that
-    a specific id is real.  We treat any 2xx as alive.
-    """
-    th, village = parse_link_meta(link)
+def liveness_probe(link: str) -> tuple[bool, str]:
+    """Return (reachable, detail) for a single share-link URL."""
     req = urllib.request.Request(
         link,
         headers={
@@ -157,27 +130,41 @@ def liveness_probe(link: str, timeout: float = 10.0) -> tuple[bool, str]:
         },
     )
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
+        with urllib.request.urlopen(req, timeout=LIVENESS_TIMEOUT) as resp:
             status = resp.status
+    except urllib.error.HTTPError as e:
+        return False, f"HTTP {e.code}"
     except Exception as e:
         return False, f"request failed: {e}"
 
     if status >= 400:
         return False, f"HTTP {status}"
-    return True, f"HTTP {status}; share endpoint reachable (cannot verify id without in-app handler)"
+    return True, f"HTTP {status}"
 
 
-def is_stale(entry: dict, today: _dt.date, max_age_days: int) -> tuple[bool, str]:
-    raw = entry.get("last_verified") or entry.get("added") or ""
-    try:
-        d = _dt.date.fromisoformat(raw)
-    except ValueError:
-        return True, "no usable last_verified or added date"
-    age = (today - d).days
-    if age > max_age_days:
-        kind = "last_verified" if entry.get("last_verified") else "added"
-        return True, f"{kind}={raw} is {age} days old (>{max_age_days})"
-    return False, ""
+def run_liveness(bases: list[dict]) -> tuple[int, int]:
+    print(
+        f"\nProbing {len(bases)} link(s) with {LIVENESS_WORKERS} workers …",
+        file=sys.stderr,
+    )
+    ok = fail = 0
+    with concurrent.futures.ThreadPoolExecutor(max_workers=LIVENESS_WORKERS) as ex:
+        future_to_idx = {
+            ex.submit(liveness_probe, b["link"]): i for i, b in enumerate(bases)
+        }
+        for fut in concurrent.futures.as_completed(future_to_idx):
+            i = future_to_idx[fut]
+            alive, detail = fut.result()
+            if alive:
+                ok += 1
+            else:
+                fail += 1
+                print(
+                    f"  STALE  bases[{i}] id={bases[i].get('id', '?')}  -- {detail}",
+                    file=sys.stderr,
+                )
+    print(f"Liveness: {ok} alive / {fail} stale.")
+    return ok, fail
 
 
 def main() -> int:
@@ -186,23 +173,12 @@ def main() -> int:
     ap.add_argument(
         "--liveness",
         action="store_true",
-        help="HTTP-probe each link.clashofclans.com URL.",
+        help="HTTP-probe each link.clashofclans.com URL (informational only).",
     )
     ap.add_argument(
         "--strict-liveness",
         action="store_true",
         help="Treat liveness failures as fatal errors.",
-    )
-    ap.add_argument(
-        "--update-verified",
-        action="store_true",
-        help="Write last_verified=<today> on entries that pass liveness.",
-    )
-    ap.add_argument(
-        "--max-age-days",
-        type=int,
-        default=0,
-        help="Flag entries whose last_verified/added is older than N days (0 = off).",
     )
     args = ap.parse_args()
 
@@ -291,51 +267,9 @@ def main() -> int:
     for th in sorted(th_dist.keys(), reverse=True):
         print(f"  TH{th}: {th_dist[th]}")
 
-    today = _dt.date.today()
-
-    # --- Staleness check ---
-    if args.max_age_days > 0:
-        stale = 0
-        for i, b in enumerate(data["bases"]):
-            bad, reason = is_stale(b, today, args.max_age_days)
-            if bad:
-                print(
-                    f"[bases[{i}] id={b.get('id', '?')}] STALE: {reason}",
-                    file=sys.stderr,
-                )
-                stale += 1
-        if stale:
-            print(
-                f"\nStaleness: {stale} entry/entries exceeded "
-                f"{args.max_age_days}-day freshness budget.",
-                file=sys.stderr,
-            )
-            return 1
-        print(f"Freshness OK: every entry is within {args.max_age_days} days.")
-
-    # --- Liveness probing ---
     if args.liveness:
-        print("\nProbing liveness against link.clashofclans.com …")
-        live_fails = 0
-        live_ok = 0
-        updated = 0
-        for i, b in enumerate(data["bases"]):
-            alive, detail = liveness_probe(b["link"])
-            tag = "ALIVE" if alive else "STALE"
-            print(f"  [{i+1}/{len(data['bases'])}] {tag} {b['id']}  -- {detail}")
-            if alive:
-                live_ok += 1
-                if args.update_verified:
-                    if b.get("last_verified") != today.isoformat():
-                        b["last_verified"] = today.isoformat()
-                        updated += 1
-            else:
-                live_fails += 1
-        print(f"\nLiveness: {live_ok} alive / {live_fails} stale.")
-        if updated:
-            path.write_text(json.dumps(data, indent=2) + "\n")
-            print(f"Updated last_verified on {updated} entry/entries.")
-        if live_fails and args.strict_liveness:
+        _, fail = run_liveness(data["bases"])
+        if fail and args.strict_liveness:
             return 1
 
     return 0

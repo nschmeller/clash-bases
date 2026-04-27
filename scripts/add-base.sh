@@ -119,7 +119,7 @@ jq --arg id "$id" \
         added: $added
       }]' "$FILE" > "$TMP"
 
-if "$ROOT/scripts/validate-bases.sh" "$TMP" >/dev/null; then
+if python3 "$ROOT/scripts/validate-bases.py" "$TMP" >/dev/null; then
   mv "$TMP" "$FILE"
   echo
   echo "Added '$name' to bases.json."

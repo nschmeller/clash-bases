@@ -248,6 +248,16 @@ main {
   font-weight: 700;
 }
 
+.load-more-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0 2rem;
+}
+.load-more-wrap .btn {
+  flex: 0 0 auto;
+  padding: 0.65rem 1.4rem;
+}
+
 footer {
   border-top: 1px solid var(--border);
   padding: 1.5rem;
