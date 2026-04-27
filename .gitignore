@@ -3,3 +3,5 @@
 Cargo.lock.bak
 *.swp
 .DS_Store
+__pycache__/
+*.py[co]
