@@ -3,14 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clash Bases</title>
+    <meta name="theme-color" content="#ffb347" />
+
+    <title>Clash Bases — community library of CoC base layouts</title>
     <meta
       name="description"
       content="A community library of Clash of Clans base layouts. Browse, search, and open shared bases directly in-game."
     />
+
+    <!-- Open Graph: rich-preview metadata read by Slack, Discord,
+         iMessage, WhatsApp, LinkedIn, Bluesky, Mastodon, GitHub
+         comments, etc. when someone pastes a link to the site. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Clash Bases" />
+    <meta
+      property="og:description"
+      content="Community library of Clash of Clans base layouts. Browse, search, and open shared bases directly in-game."
+    />
+    <meta property="og:image" content="favicon.svg" />
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link data-trunk rel="css" href="styles.css" />
     <link data-trunk rel="copy-file" href="bases.json" />
+    <link data-trunk rel="copy-file" href="favicon.svg" />
     <link data-trunk rel="copy-file" href=".nojekyll" />
   </head>
-  <body></body>
+  <body>
+    <noscript>
+      <p style="text-align:center;padding:2rem;color:#e8ecf3;background:#0f1218;font-family:sans-serif">
+        Clash Bases is a Rust/WebAssembly app and needs JavaScript enabled.
+        The catalogue source is at
+        <a href="https://github.com/nschmeller/clash-bases" style="color:#6cb6ff">github.com/nschmeller/clash-bases</a>.
+      </p>
+    </noscript>
+  </body>
 </html>

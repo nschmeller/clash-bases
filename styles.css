@@ -271,3 +271,34 @@ footer code {
   border-radius: 6px;
   border: 1px solid var(--border);
 }
+footer a {
+  color: var(--link);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Keyboard-focus ring -- buttons and tabs leave outline:auto, but the
+   form controls already drew their own custom focus.  Make every
+   focusable element show a visible ring when reached via Tab. */
+.tab:focus-visible,
+.btn:focus-visible,
+footer a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Respect users who have reduced-motion enabled in their OS: drop the
+   hover-zoom and slide-up transforms, keep colour transitions. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .card:hover { transform: none; }
+  .card:hover .thumb img { transform: none; }
+  .btn:active { transform: none; }
+}
