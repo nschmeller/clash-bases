@@ -22,35 +22,44 @@ Clash** to load a layout straight into the game via the official
 
 ## Catalogue origin
 
-The 140-entry seed catalogue was assembled exclusively from
-**permissively-published GitHub repositories**, each entry credited to
-its upstream source in the `builder` field:
+The catalogue currently has **5,617 entries**, assembled from a mix of
+GitHub seed data and three major community catalogue sites. Every
+entry credits its upstream source in the `builder` field.
 
-| Source                                 | TH levels   | Style                                |
-| -------------------------------------- | ----------- | ------------------------------------ |
-| `tonykslee/ClashCookies`               | TH8–TH18    | FWA war seed (Basic/Ice/Rising Dawn) |
-| `saadahmed0147/coc_bases`              | TH4–TH17    | Categorised farming/anti-2/anti-3    |
-| `isabelle1309/COCBaseShowcase` Apr–Jun '25 | TH17    | Monthly war/legend showcase          |
-| `RomNeedBoba/coclayout`                | TH15, TH16  | HV / Legend league                   |
-| `topusapp/topusapp.github.io` (YT)     | TH18        | KLAWKLA YouTube share                |
-| User-submitted (e.g. Praz)             | TH16        | Hand-picked                          |
+| Source                                 | Entries | TH range  | Style                                 |
+| -------------------------------------- | ------: | --------- | ------------------------------------- |
+| `cocbases.com` (paginated catalogue)   |   3267  | TH4–TH18  | War / Trophy / Farm / Progress / Fun  |
+| `basemelon.com` (paginated catalogue)  |   1834  | TH4–TH18  | War / Trophy / Farm / Progress        |
+| `blueprintcoc.com` (TH-tagged blogs)   |    376  | TH9–TH18  | Curated layout articles               |
+| `tonykslee/ClashCookies` (GitHub)      |     32  | TH8–TH18  | FWA war seed (Basic/Ice/Rising Dawn)  |
+| `saadahmed0147/coc_bases` (GitHub)     |     42  | TH4–TH17  | Categorised farming/anti-2/anti-3     |
+| `isabelle1309/COCBaseShowcase` (GitHub)|     47  | TH17      | Monthly war/legend showcase           |
+| `RomNeedBoba/coclayout` (GitHub)       |     19  | TH15-16   | HV / Legend league                    |
+| `topusapp/topusapp.github.io` (YT)     |      1  | TH18      | KLAWKLA YouTube share                 |
+| User-submitted (e.g. Praz)             |      1  | TH16      | Hand-picked                           |
 
-The TH18 ceiling is currently low (4 entries) because TH18 only
-released in November 2025. Contributions of newer Legend / War TH18
-links are very welcome.
+Distribution per TH: TH4 168 · TH5 168 · TH6 212 · TH7 393 · TH8 328 ·
+TH9 399 · TH10 420 · TH11 422 · TH12 389 · TH13 392 · TH14 385 ·
+TH15 427 · TH16 433 · TH17 604 · TH18 477.
 
 ### Notes on aggregation tactics
 
-Every layout *catalogue* site (cocbases, basemelon, blueprintcoc,
-clashchamps, clashcodes, clashofclans-layouts, etc.) is behind
-Cloudflare and refuses non-browser traffic, so we cannot programmatically
-mirror them. Discovery instead happens through **GitHub Code Search**
-(`mcp__github__search_code`) for the literal substring
-`"link.clashofclans.com" "OpenLayout"`, then `raw.githubusercontent.com`
-fetches against any candidate file paths. The same approach has been
-tried against Wayback Machine, Reddit, Pinterest, DuckDuckGo HTML, Bing
-HTML, and unauth'd GitHub Code Search — all 403/blocked from the
-sandbox.
+The three catalogue sites — cocbases.com, basemelon.com,
+blueprintcoc.com — serve their per-base detail pages as plain HTML with
+the share link in an `OpenLayout` `href` and the per-base preview image
+in either a JSON-LD `rawItems` block (cocbases), a fixed
+`img.basemelon.com/bases/th{N}/{id}/md.jpg` URL (basemelon), or a
+nearby `<img>` element (blueprintcoc). Polite throttled crawling
+(3 concurrent connections per host with 1.5×-exponential-backoff on
+429/503) gets through without trouble; the harvester lives at
+`/tmp/scrape/harvest.py` in the development sandbox. **Zero overlap**
+between the three sources at the share-link layer — each site has
+independently curated content.
+
+Other catalogue sites (clashchamps, clashbaselink, cocbase.link,
+clashofclans-baselinks, clashofclans-layouts, clashcodes) sit behind
+Cloudflare or return 404/503 to non-browser traffic and were not
+mirrored. They remain good fallbacks for manual contributions.
 
 ## Where to find bases
 
@@ -118,10 +127,15 @@ share IDs:
 - The TH number embedded in the URL must match the entry's `town_hall`.
 
 Pass `--liveness` to additionally HTTP-probe each link against
-`link.clashofclans.com`. Liveness is best-effort: Supercell does not
-expose an "is this layout valid?" API, so a 200 only confirms that the
-share endpoint accepted the request, not that the layout still resolves
-in-game. The CI workflow runs this on every push.
+`link.clashofclans.com`. As of 2026-04 the share endpoint serves a
+byte-identical landing page for every TH/blob combination — including
+syntactically correct but cryptographically invalid ones — so a 200
+only confirms reachability, not validity. There is no public API
+(neither `link.clashofclans.com` nor `api.clashofclans.com/v1/`) that
+validates a specific layout id; the in-app deep-link handler is the
+only authoritative resolver. Structural validation + curation by the
+upstream source is the strongest programmatic confidence the
+catalogue can offer.
 
 ### Field reference
 

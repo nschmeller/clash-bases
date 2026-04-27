@@ -25,21 +25,25 @@ The TH<n> embedded in the URL is also cross-checked against the
 Liveness probing
 ----------------
 Pass `--liveness` to additionally fetch each layout URL from
-link.clashofclans.com and inspect the response body.  Supercell does
-*not* expose an "is this layout valid?" API, but the share endpoint
-renders different OpenGraph metadata depending on whether it recognised
-the id:
+link.clashofclans.com and inspect the response body.  Historically the
+share endpoint rendered layout-specific OpenGraph metadata only when
+Supercell recognised the id, so a body-content heuristic could
+distinguish real ids from fakes.
 
-    - On a recognised layout the rendered page references the TH level
-      and village type (HV/WB) somewhere in its body / meta tags.
-    - On an unknown id the endpoint still returns 200 OK, but with the
-      generic landing page that does *not* reference the requested TH.
+That stopped working in 2026.  As of 2026-04 the endpoint serves a
+byte-identical (Cloudfront-cached) generic landing page for *every*
+combination of TH and blob -- including blobs that are syntactically
+correct but cryptographically invalid.  Verified by comparing four
+known-good ids (FWA Basic/Ice/Rising Dawn TH18 and KLAWKLA TH18) against
+an all-zero blob: all four 200 OK, all four 69_438 bytes, all four with
+the same `<title>Clash of Clans</title>` and generic
+`og:image=images/game/opengraph.jpg`.  Only the in-app deep-link handler
+on the player's device can actually resolve the HMAC tag.
 
-We treat presence of the TH/village markers as evidence the layout is
-real and currently resolvable.  This is heuristic -- the response shape
-may change as Supercell updates the share endpoint -- so any liveness
-failure is reported but does not by itself fail the run unless
-`--strict-liveness` is passed.
+The probe still runs (it can detect TLS / DNS / 404 regressions), but
+it can no longer prove a specific id is real.  Any liveness failure is
+reported but does not fail the run unless `--strict-liveness` is
+passed.
 
 Staleness
 ---------
@@ -137,12 +141,11 @@ def parse_link_meta(link: str) -> tuple[int, str]:
 
 def liveness_probe(link: str, timeout: float = 10.0) -> tuple[bool, str]:
     """
-    Probe `link` and decide whether the response indicates a recognised
-    layout.
+    Probe `link` and decide whether the share endpoint accepted the URL.
 
-    Returns (alive, detail).  `alive=True` only when the response body
-    references the URL's TH level and village type, which only happens
-    when Supercell rendered a layout-specific preview.
+    As of 2026-04 the endpoint returns the same 69_438-byte landing page
+    for every combination of TH/blob, so this can no longer verify that
+    a specific id is real.  We treat any 2xx as alive.
     """
     th, village = parse_link_meta(link)
     req = urllib.request.Request(
@@ -156,25 +159,12 @@ def liveness_probe(link: str, timeout: float = 10.0) -> tuple[bool, str]:
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             status = resp.status
-            body = resp.read(200_000).decode("utf-8", errors="replace")
     except Exception as e:
         return False, f"request failed: {e}"
 
     if status >= 400:
         return False, f"HTTP {status}"
-
-    body_l = body.lower()
-    th_marker = f"th{th}".lower()
-    full_id = link.split("id=", 1)[1] if "id=" in link else ""
-    decoded_id = urllib.parse.unquote(full_id)
-
-    # The recognised-layout response embeds the layout id verbatim in OG
-    # tags / canonical URL. The fallback landing page does not.
-    if decoded_id and decoded_id in body:
-        return True, f"HTTP {status}; layout id present in response"
-    if th_marker in body_l and village.lower() in body_l:
-        return True, f"HTTP {status}; TH and village markers present"
-    return False, f"HTTP {status}; response did not reference TH{th}/{village} (looks like fallback page)"
+    return True, f"HTTP {status}; share endpoint reachable (cannot verify id without in-app handler)"
 
 
 def is_stale(entry: dict, today: _dt.date, max_age_days: int) -> tuple[bool, str]:
