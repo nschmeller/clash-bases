@@ -1,6 +1,11 @@
-name: Deploy to GitHub Pages
+name: CI / Deploy
+
+# PRs run validate-bases + build (so contributors see the same
+# checks main runs).  Only push to main (or a manual dispatch from
+# main) actually deploys to GitHub Pages.
 
 on:
+  pull_request:
   push:
     branches: [main]
   workflow_dispatch:
@@ -11,22 +16,22 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  # Per-ref so PR builds don't fight each other or the main-branch
+  # deploy.  Cancel in-progress on PRs (rapid-pushed commits supersede
+  # each other) but never on main (we want every push to actually
+  # finish deploying).
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  validate-bases:
+    uses: ./.github/workflows/validate-bases.yml
+
   build:
+    needs: validate-bases
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Validate bases.json (structural)
-        run: python3 scripts/validate-bases.py bases.json
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
@@ -55,6 +60,12 @@ jobs:
 
   deploy:
     needs: build
+    # Only the main branch deploys.  The push trigger above is already
+    # restricted to main, but workflow_dispatch can fire from any
+    # branch -- the explicit ref check makes a fork's "Run workflow"
+    # button on a feature branch a no-op rather than an unintended
+    # deploy of half-finished work.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
