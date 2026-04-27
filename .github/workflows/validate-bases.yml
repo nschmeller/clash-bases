@@ -1,0 +1,54 @@
+name: Validate bases.json (reusable)
+
+# Reusable workflow.  Called by deploy.yml on every PR + push to main
+# (PR -> validate + build feedback; main -> validate + build + deploy).
+#
+# Uses --diff-against HEAD~1's bases.json so the expensive per-entry
+# checks (E1-E13, W1-W3, L1-L4 liveness + image probes) only run for
+# entries that are NEW in this push / PR.  Catalogue-wide uniqueness
+# (E8 tag collision, E10 id/link, E14 normalised link) still scans
+# the whole file, so a PR can't slip in a duplicate of an existing
+# entry.
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # We need HEAD~1 to materialise the previous bases.json for
+          # --diff-against.  On PRs, GitHub checks out a synthetic
+          # merge commit whose first parent is the target branch tip,
+          # so HEAD~1 still resolves to "what main looks like before
+          # this change".  fetch-depth=2 is the minimum.
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Materialise baseline bases.json from HEAD~1
+        run: |
+          set -e
+          if git rev-parse HEAD~1 >/dev/null 2>&1; then
+            git show HEAD~1:bases.json > /tmp/bases.base.json 2>/dev/null \
+              || echo '{"bases": []}' > /tmp/bases.base.json
+          else
+            echo '{"bases": []}' > /tmp/bases.base.json
+          fi
+          python3 -c "import json; print('baseline entries:', len(json.load(open('/tmp/bases.base.json'))['bases']))"
+
+      - name: Validate (structural full + L1-L4 on new entries)
+        run: |
+          python3 scripts/validate-bases.py bases.json \
+            --diff-against /tmp/bases.base.json \
+            --liveness \
+            --check-images \
+            --strict-liveness
