@@ -263,16 +263,19 @@ fn app() -> Html {
                 <input
                     type="text"
                     placeholder="Search by name, builder, tag…"
+                    aria-label="Search bases by name, builder or tag"
+                    autocomplete="off"
+                    spellcheck="false"
                     value={(*search).clone()}
                     oninput={on_search}
                 />
-                <select onchange={on_type_change}>
+                <select onchange={on_type_change} aria-label="Filter by base type">
                     <option value="" selected={filter_type.is_empty()}>{ "All Types" }</option>
                     { for types.iter().map(|t| html! {
                         <option value={t.clone()} selected={*filter_type == *t}>{ t.clone() }</option>
                     }) }
                 </select>
-                <span class="count">
+                <span class="count" aria-live="polite">
                     { format!("{shown} of {total_matches} base(s)") }
                 </span>
             </section>
@@ -281,9 +284,13 @@ fn app() -> Html {
 
             <footer>
                 <p>
-                    { "Bases are stored in " }
+                    { "Bases live in " }
                     <code>{ "bases.json" }</code>
-                    { " in this repository. Open a pull request to add yours." }
+                    { " — " }
+                    <a href="https://github.com/nschmeller/clash-bases" target="_blank" rel="noopener noreferrer">
+                        { "view source on GitHub" }
+                    </a>
+                    { " or open a pull request to add yours." }
                 </p>
             </footer>
         </>
@@ -344,10 +351,17 @@ fn base_card(props: &BaseCardProps) -> Html {
                 </ul>
             }
             <div class="actions">
-                <a class="btn primary" href={b.link.clone()} target="_blank" rel="noopener noreferrer">
+                <a class="btn primary"
+                   href={b.link.clone()}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label={format!("Open {} in Clash of Clans", &b.name)}>
                     { "Open in Clash" }
                 </a>
-                <button class="btn" onclick={on_copy}>
+                <button class="btn"
+                        onclick={on_copy}
+                        aria-live="polite"
+                        aria-label={format!("Copy share link for {}", &b.name)}>
                     { if *copied { "Copied!" } else { "Copy link" } }
                 </button>
             </div>
