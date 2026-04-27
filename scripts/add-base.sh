@@ -4,8 +4,9 @@
 # Usage: ./scripts/add-base.sh
 #
 # Reads the in-game share link from the clipboard (or prompts) and asks
-# for the remaining fields. Validates the result with validate-bases.sh
-# before writing.
+# for the remaining fields. Runs the Python validator on the candidate
+# file before committing the write, so a malformed entry never lands
+# in bases.json.
 
 set -euo pipefail
 
@@ -76,7 +77,13 @@ fi
 
 prompt_required name "Base name"
 prompt_required town_hall "Town hall (e.g. 16)"
-case "$town_hall" in *[!0-9]*) echo "town_hall must be an integer"; exit 1 ;; esac
+case "$town_hall" in
+  *[!0-9]*) echo "town_hall must be an integer" >&2; exit 1 ;;
+esac
+if [ "$town_hall" -lt 1 ] || [ "$town_hall" -gt 20 ]; then
+  echo "town_hall must be between 1 and 20" >&2
+  exit 1
+fi
 
 prompt type "Type" "War"
 prompt builder "Builder credit (optional)"
