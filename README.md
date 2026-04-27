@@ -22,25 +22,14 @@ Clash** to load a layout straight into the game via the official
 
 ## Catalogue origin
 
-The catalogue currently has **5,617 entries**, assembled from a mix of
+The catalogue currently has **5,162 entries**, assembled from a mix of
 GitHub seed data and three major community catalogue sites. Every
-entry credits its upstream source in the `builder` field.
+entry credits its upstream source in the `builder` field and has a
+preview image (the validator rejects entries without one).
 
-| Source                                 | Entries | TH range  | Style                                 |
-| -------------------------------------- | ------: | --------- | ------------------------------------- |
-| `cocbases.com` (paginated catalogue)   |   3267  | TH4–TH18  | War / Trophy / Farm / Progress / Fun  |
-| `basemelon.com` (paginated catalogue)  |   1834  | TH4–TH18  | War / Trophy / Farm / Progress        |
-| `blueprintcoc.com` (TH-tagged blogs)   |    376  | TH9–TH18  | Curated layout articles               |
-| `tonykslee/ClashCookies` (GitHub)      |     32  | TH8–TH18  | FWA war seed (Basic/Ice/Rising Dawn)  |
-| `saadahmed0147/coc_bases` (GitHub)     |     42  | TH4–TH17  | Categorised farming/anti-2/anti-3     |
-| `isabelle1309/COCBaseShowcase` (GitHub)|     47  | TH17      | Monthly war/legend showcase           |
-| `RomNeedBoba/coclayout` (GitHub)       |     19  | TH15-16   | HV / Legend league                    |
-| `topusapp/topusapp.github.io` (YT)     |      1  | TH18      | KLAWKLA YouTube share                 |
-| User-submitted (e.g. Praz)             |      1  | TH16      | Hand-picked                           |
-
-Distribution per TH: TH4 168 · TH5 168 · TH6 212 · TH7 393 · TH8 328 ·
-TH9 399 · TH10 420 · TH11 422 · TH12 389 · TH13 392 · TH14 385 ·
-TH15 427 · TH16 433 · TH17 604 · TH18 477.
+Distribution per TH: TH4 168 · TH5 168 · TH6 212 · TH7 384 · TH8 324 ·
+TH9 359 · TH10 383 · TH11 398 · TH12 366 · TH13 373 · TH14 366 ·
+TH15 357 · TH16 354 · TH17 535 · TH18 415.
 
 ### Notes on aggregation tactics
 
@@ -143,9 +132,10 @@ catalogue can offer.
 | ------------- | -------- | -------------------------------------------------------------------- |
 | `id`          | yes      | Unique slug, kebab-case.                                             |
 | `name`        | yes      | Display name.                                                        |
-| `town_hall`   | yes      | Integer, 1–16+.                                                      |
-| `type`        | yes      | `War`, `CWL`, `Trophy`, `Farm`, `Hybrid`, `Legend`, `Builder Hall`…  |
+| `town_hall`   | yes      | Integer, 1–20.                                                       |
+| `type`        | yes      | One of `War`, `Trophy`, `Farm`, `Hybrid`, `Progress`, `Fun`, `Home Village`. |
 | `link`        | yes      | Full `https://link.clashofclans.com/...` URL from the in-game share. |
+| `image`       | yes      | Per-base preview image URL (≥200×200; YouTube/TikTok thumbnails rejected). |
 | `description` | no       | Short paragraph about the base's strengths.                          |
 | `builder`     | no       | Credit for the original designer.                                    |
 | `tags`        | no       | Free-form list, used by the search box.                              |
@@ -153,7 +143,7 @@ catalogue can offer.
 
 ## Local development
 
-Prerequisites: Rust 1.85+ (edition 2024) and the `wasm32-unknown-unknown`
+Prerequisites: Rust 1.95+ (edition 2024) and the `wasm32-unknown-unknown`
 target.
 
 ```bash
