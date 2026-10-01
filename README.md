@@ -80,6 +80,7 @@ the original builder.
      "town_hall": 16,
      "type": "War",
      "link": "https://link.clashofclans.com/en?action=OpenLayout&id=TH16%3AWB%3A...",
+     "image": "https://example.com/path/to/base-preview.png",
      "description": "Short notes about the base.",
      "builder": "YourName",
      "tags": ["anti-3-star", "anti-rootrider"],

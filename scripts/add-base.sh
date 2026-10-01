@@ -88,6 +88,7 @@ fi
 prompt type "Type" "War"
 prompt builder "Builder credit (optional)"
 prompt description "One-line description (optional)"
+prompt_required image "Preview image URL"
 prompt tags_raw "Tags, comma-separated (optional)"
 prompt added "Date added (YYYY-MM-DD)" "$(date +%Y-%m-%d)"
 
@@ -112,6 +113,7 @@ jq --arg id "$id" \
    --arg link "$link" \
    --arg description "$description" \
    --arg builder "$builder" \
+   --arg image "$image" \
    --argjson tags "$tags_json" \
    --arg added "$added" \
    '.bases += [{
@@ -120,6 +122,7 @@ jq --arg id "$id" \
         town_hall: $town_hall,
         type: $type,
         link: $link,
+        image: $image,
         description: $description,
         builder: $builder,
         tags: $tags,
